@@ -2,11 +2,6 @@ module.exports = {
   docsSidebar: [
     'home',
     {
-      type: 'doc',
-      id: 'INDEX',
-      label: 'Specification index'
-    },
-    {
       type: 'category',
       label: 'Bit language',
       collapsed: false,
