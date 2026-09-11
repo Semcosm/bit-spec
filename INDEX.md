@@ -1,3 +1,10 @@
+---
+id: INDEX
+title: Bit specification index
+slug: /index
+sidebar_position: 2
+---
+
 # Bit specification index
 
 This page is the stable entry point for the repository. Links are grouped by the layer they describe; a document may reference a lower layer but must not silently redefine it.
