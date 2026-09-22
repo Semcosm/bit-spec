@@ -1,0 +1,42 @@
+{
+  "link.title.Specification": {
+    "message": "规范",
+    "description": "The title of the footer links column with title=Specification in the footer"
+  },
+  "link.title.Project": {
+    "message": "项目",
+    "description": "The title of the footer links column with title=Project in the footer"
+  },
+  "link.item.label.Language": {
+    "message": "语言",
+    "description": "The label of footer link with label=Language linking to /docs/spec/bit/language"
+  },
+  "link.item.label.BIR": {
+    "message": "BIR",
+    "description": "The label of footer link with label=BIR linking to /docs/spec/bir/overview"
+  },
+  "link.item.label.Architecture": {
+    "message": "架构",
+    "description": "The label of footer link with label=Architecture linking to /docs/architecture/overview"
+  },
+  "link.item.label.Specification index": {
+    "message": "规范索引",
+    "description": "The label of footer link with label=Specification index linking to /docs/index"
+  },
+  "link.item.label.RFC process": {
+    "message": "RFC 流程",
+    "description": "The label of footer link with label=RFC process linking to /docs/rfcs/rfc-process"
+  },
+  "link.item.label.Conformance": {
+    "message": "一致性",
+    "description": "The label of footer link with label=Conformance linking to /docs/conformance/"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/bit-spec/bit-spec"
+  },
+  "copyright": {
+    "message": "Bit Specification - 2026",
+    "description": "The footer copyright"
+  }
+}

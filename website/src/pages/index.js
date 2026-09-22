@@ -1,90 +1,28 @@
 import React from 'react';
+import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
+const copy = {
+  en: {
+    title: 'Bit Specification', description: 'A portable systems language and a verifiable intermediate representation, documented as contracts for implementations.', draft: 'Working Draft', readDocs: 'Read the documentation', browseIndex: 'Browse the index', coreEyebrow: 'Core contracts', coreTitle: 'Start with the three layers', coreIntro: 'Read source semantics first, then the representation and the boundaries that make an implementation portable.', language: 'Bit language', languageDescription: 'Syntax, semantics, types, ownership, memory, concurrency, and modules.', languageLink: 'Open language specification', birDescription: 'A typed, region-based IR with explicit effects, control flow, and verification rules.', birLink: 'Open BIR specification', architecture: 'Architecture', architectureDescription: 'Compilation stages, trust boundaries, dependencies, and the LLVM seed direction.', architectureLink: 'Open architecture guide', readingEyebrow: 'How to read the spec', readingTitle: 'Follow contracts from source to target', readingDescription: 'Normative rules define behavior. Architecture and design documents explain boundaries. Guides show how to apply the contracts without inventing unspecified behavior.', guides: 'Read the contributor guides', rfc: 'Understand the RFC process', conformance: 'Review conformance expectations', statusEyebrow: 'Project status', statusTitle: 'What is ready, and what is next', statusDescription: 'The repository is a working draft. A document becomes normative only after the RFC process accepts it.', ready: 'Ready', next: 'Next', readyLanguage: 'Language and BIR draft contracts', readyArchitecture: 'Architecture and design rationale', nextProfiles: 'ABI, runtime, and bootstrap profiles', nextFixtures: 'Executable conformance fixtures'
+  },
+  'zh-Hans': {
+    title: 'Bit 规范', description: '面向可移植系统语言与可验证中间表示的规范，以实现契约的形式记录。', draft: '工作草案', readDocs: '阅读文档', browseIndex: '浏览索引', coreEyebrow: '核心契约', coreTitle: '从三个层次开始', coreIntro: '先阅读源语言语义，再了解中间表示和实现可移植性所需的边界契约。', language: 'Bit 语言', languageDescription: '语法、语义、类型、所有权、内存、并发与模块。', languageLink: '打开语言规范', birDescription: '具有显式效果、控制流和验证规则的类型化区域中间表示。', birLink: '打开 BIR 规范', architecture: '架构', architectureDescription: '编译阶段、信任边界、依赖关系以及 LLVM 种子实现方向。', architectureLink: '打开架构指南', readingEyebrow: '如何阅读规范', readingTitle: '沿着契约从源代码读到目标代码', readingDescription: '规范性规则定义行为，架构和设计文档解释边界，指南说明如何应用契约而不自行推断未定义行为。', guides: '阅读贡献者指南', rfc: '了解 RFC 流程', conformance: '查看一致性要求', statusEyebrow: '项目状态', statusTitle: '哪些内容已就绪，下一步是什么', statusDescription: '仓库目前是工作草案。文档只有经过 RFC 流程接受后才具有规范性。', ready: '已就绪', next: '下一步', readyLanguage: '语言与 BIR 草案契约', readyArchitecture: '架构与设计依据', nextProfiles: 'ABI、运行时与引导 profile', nextFixtures: '可执行的一致性测试样例'
+  }
+};
 
 export default function Home() {
+  const { i18n } = useDocusaurusContext();
+  const t = copy[i18n.currentLocale] || copy.en;
+  const isChinese = i18n.currentLocale === 'zh-Hans';
   return (
     <main>
-      <header className="homeHero">
-        <div className="container">
-          <p className="eyebrow">Working Draft</p>
-          <h1>Bit Specification</h1>
-          <p className="homeHero__subtitle">
-            A portable systems language and a verifiable intermediate representation,
-            documented as contracts for implementations.
-          </p>
-          <div className="homeHero__actions">
-            <Link className="button button--primary button--lg" to="/docs/">
-              Read the documentation
-            </Link>
-            <Link className="button button--secondary button--lg" to="/docs/index">
-              Browse the index
-            </Link>
-          </div>
-        </div>
-      </header>
-
-      <section className="homeSection container" aria-labelledby="core-contracts">
-        <div className="sectionHeading">
-          <p className="eyebrow">Core contracts</p>
-          <h2 id="core-contracts">Start with the three layers</h2>
-          <p>
-            Read source semantics first, then the representation and the boundaries that make an implementation portable.
-          </p>
-        </div>
-        <div className="homeGrid homeGrid--three">
-          <Link className="homeCard" to="/docs/spec/bit/language">
-            <span className="homeCard__index">01</span>
-            <h3>Bit language</h3>
-            <p>Syntax, semantics, types, ownership, memory, concurrency, and modules.</p>
-            <span className="homeCard__link">Open language specification</span>
-          </Link>
-          <Link className="homeCard" to="/docs/spec/bir/overview">
-            <span className="homeCard__index">02</span>
-            <h3>BIR</h3>
-            <p>A typed, region-based IR with explicit effects, control flow, and verification rules.</p>
-            <span className="homeCard__link">Open BIR specification</span>
-          </Link>
-          <Link className="homeCard" to="/docs/architecture/overview">
-            <span className="homeCard__index">03</span>
-            <h3>Architecture</h3>
-            <p>Compilation stages, trust boundaries, dependencies, and the LLVM seed direction.</p>
-            <span className="homeCard__link">Open architecture guide</span>
-          </Link>
-        </div>
-      </section>
-
-      <section className="homeSection homeSection--muted" aria-labelledby="read-spec">
-        <div className="container homeSplit">
-          <div>
-            <p className="eyebrow">How to read the spec</p>
-            <h2 id="read-spec">Follow contracts from source to target</h2>
-            <p>
-              Normative rules define behavior. Architecture and design documents explain boundaries. Guides show how to apply the contracts without inventing unspecified behavior.
-            </p>
-          </div>
-          <div className="homeLinks">
-            <Link to="/docs/guides/overview">Read the contributor guides <span aria-hidden="true">-&gt;</span></Link>
-            <Link to="/docs/rfcs/rfc-process">Understand the RFC process <span aria-hidden="true">-&gt;</span></Link>
-            <Link to="/docs/conformance/">Review conformance expectations <span aria-hidden="true">-&gt;</span></Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="homeSection container" aria-labelledby="status">
-        <div className="sectionHeading sectionHeading--row">
-          <div>
-            <p className="eyebrow">Project status</p>
-            <h2 id="status">What is ready, and what is next</h2>
-          </div>
-          <p>The repository is a working draft. A document becomes normative only after the RFC process accepts it.</p>
-        </div>
-        <div className="homeGrid homeGrid--four">
-          <div className="statusItem statusItem--ready"><strong>Ready</strong><span>Language and BIR draft contracts</span></div>
-          <div className="statusItem statusItem--ready"><strong>Ready</strong><span>Architecture and design rationale</span></div>
-          <div className="statusItem statusItem--next"><strong>Next</strong><span>ABI, runtime, and bootstrap profiles</span></div>
-          <div className="statusItem statusItem--next"><strong>Next</strong><span>Executable conformance fixtures</span></div>
-        </div>
-      </section>
+      <Head><title>{t.title} | Bit Specification</title><meta name="description" content={t.description} /><html lang={isChinese ? 'zh-CN' : 'en'} /></Head>
+      <header className="homeHero"><div className="container"><p className="eyebrow">{t.draft}</p><h1>{t.title}</h1><p className="homeHero__subtitle">{t.description}</p><div className="homeHero__actions"><Link className="button button--primary button--lg" to="/docs/">{t.readDocs}</Link><Link className="button button--secondary button--lg" to="/docs/index">{t.browseIndex}</Link></div></div></header>
+      <section className="homeSection container" aria-labelledby="core-contracts"><div className="sectionHeading"><p className="eyebrow">{t.coreEyebrow}</p><h2 id="core-contracts">{t.coreTitle}</h2><p>{t.coreIntro}</p></div><div className="homeGrid homeGrid--three"><Link className="homeCard" to="/docs/spec/bit/language"><span className="homeCard__index">01</span><h3>{t.language}</h3><p>{t.languageDescription}</p><span className="homeCard__link">{t.languageLink}</span></Link><Link className="homeCard" to="/docs/spec/bir/overview"><span className="homeCard__index">02</span><h3>BIR</h3><p>{t.birDescription}</p><span className="homeCard__link">{t.birLink}</span></Link><Link className="homeCard" to="/docs/architecture/overview"><span className="homeCard__index">03</span><h3>{t.architecture}</h3><p>{t.architectureDescription}</p><span className="homeCard__link">{t.architectureLink}</span></Link></div></section>
+      <section className="homeSection homeSection--muted" aria-labelledby="read-spec"><div className="container homeSplit"><div><p className="eyebrow">{t.readingEyebrow}</p><h2 id="read-spec">{t.readingTitle}</h2><p>{t.readingDescription}</p></div><div className="homeLinks"><Link to="/docs/guides/overview">{t.guides} <span aria-hidden="true">-&gt;</span></Link><Link to="/docs/rfcs/rfc-process">{t.rfc} <span aria-hidden="true">-&gt;</span></Link><Link to="/docs/conformance/">{t.conformance} <span aria-hidden="true">-&gt;</span></Link></div></div></section>
+      <section className="homeSection container" aria-labelledby="status"><div className="sectionHeading sectionHeading--row"><div><p className="eyebrow">{t.statusEyebrow}</p><h2 id="status">{t.statusTitle}</h2></div><p>{t.statusDescription}</p></div><div className="homeGrid homeGrid--four"><div className="statusItem statusItem--ready"><strong>{t.ready}</strong><span>{t.readyLanguage}</span></div><div className="statusItem statusItem--ready"><strong>{t.ready}</strong><span>{t.readyArchitecture}</span></div><div className="statusItem statusItem--next"><strong>{t.next}</strong><span>{t.nextProfiles}</span></div><div className="statusItem statusItem--next"><strong>{t.next}</strong><span>{t.nextFixtures}</span></div></div></section>
     </main>
   );
 }

@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "当前版本",
+    "description": "The label for version current"
+  },
+  "sidebar.docsSidebar.category.Bit language": {
+    "message": "Bit 语言",
+    "description": "The label for category Bit language in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.BIR": {
+    "message": "BIR",
+    "description": "The label for category BIR in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Boundaries": {
+    "message": "边界",
+    "description": "The label for category Boundaries in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Architecture": {
+    "message": "架构",
+    "description": "The label for category Architecture in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Design": {
+    "message": "设计",
+    "description": "The label for category Design in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Guides": {
+    "message": "指南",
+    "description": "The label for category Guides in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.RFCs": {
+    "message": "RFCs",
+    "description": "The label for category RFCs in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Reference": {
+    "message": "参考",
+    "description": "The label for category Reference in sidebar docsSidebar"
+  }
+}

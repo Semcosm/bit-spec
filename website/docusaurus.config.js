@@ -14,6 +14,14 @@ const githubUrl = `https://github.com/${organizationName}/${projectName}`;
 const config = {
   title: 'Bit Specification',
   tagline: 'A portable language and a verifiable intermediate representation',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'zh-Hans'],
+    localeConfigs: {
+      en: { label: 'English', direction: 'ltr' },
+      'zh-Hans': { label: '简体中文', direction: 'ltr' }
+    }
+  },
   url,
   baseUrl,
   organizationName,
@@ -63,6 +71,10 @@ const config = {
           sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Documentation'
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right'
         },
         {
           href: githubUrl,
