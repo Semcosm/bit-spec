@@ -1,6 +1,7 @@
 module.exports = {
   docsSidebar: [
     'home',
+    'repository-index',
     {
       type: 'category',
       label: 'Bit language',

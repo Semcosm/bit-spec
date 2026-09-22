@@ -12,7 +12,7 @@ The keywords **MUST**, **MUST NOT**, **SHOULD**, **SHOULD NOT**, and **MAY** are
 
 ## Start here
 
-- [Index](INDEX.md) - the canonical map of the repository.
+- [Index](repository-index.md) - the canonical map of the repository.
 - [Language overview](spec/bit/language.md) - source language boundaries and notation.
 - [BIR overview](spec/bir/overview.md) - the compiler-facing representation.
 - [Architecture overview](architecture/overview.md) - trust boundaries and data flow.

@@ -31,6 +31,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           include: [
             'index.md',
+            'repository-index.md',
             'architecture/**/*.md',
             'design/**/*.md',
             'spec/**/*.md',
@@ -84,7 +85,9 @@ const config = {
         {
           title: 'Project',
           items: [
+            { label: 'Specification index', to: '/docs/index' },
             { label: 'RFC process', to: '/docs/rfcs/rfc-process' },
+            { label: 'Conformance', to: '/docs/conformance/' },
             { label: 'GitHub', href: githubUrl }
           ]
         }

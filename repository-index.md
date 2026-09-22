@@ -1,5 +1,5 @@
 ---
-id: INDEX
+id: repository-index
 title: Bit specification index
 slug: /index
 sidebar_position: 2

@@ -5,6 +5,12 @@ on:
     branches:
       - main
       - master
+  pull_request:
+    paths:
+      - '*.md'
+      - '**/*.md'
+      - 'website/**'
+      - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
 
 permissions:
@@ -34,7 +40,7 @@ jobs:
 
       - name: Install website dependencies
         working-directory: website
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
 
       - name: Build website
         working-directory: website
@@ -49,6 +55,7 @@ jobs:
           path: website/build
 
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
